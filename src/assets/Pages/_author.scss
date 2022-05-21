@@ -1,0 +1,157 @@
+.background-profile{
+    width: 100vw;
+    height: 200px;
+    min-height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.bg{
+        background-color: rgb(230, 230, 230);
+    }
+
+    .image-ava-author-container{
+        z-index: 3;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid white;
+        position: absolute;
+        left: auto;
+        right: auto;
+        top: 125px;
+        height: 140px;
+        width: 140px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.background-profile-below{
+    width: 100vw;
+    height: 200px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .profile-name-container{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .profile-name{
+            margin: 10px 0 10px 0;
+        }
+    }
+}
+
+
+.prf-header-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(229, 232, 235);
+    margin-bottom: 10px;
+
+    .prf-header-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        min-width: 200px;
+        .prf-header-item-icon{
+            margin-right: 10px;
+        }
+
+        .prf-header-item-top{
+            padding: 0 25px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .text{
+                margin: 0 0 0 10px;
+                font-size: 13px;
+            }
+            &.active-item{
+                color: black;
+            }
+        }
+
+        
+        .active-boder-bottom{
+            width: 100%;
+            background-color: rgb(32, 129, 226);
+            height: 5px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .deactive-boder-bottom{
+            width: 100%;
+            background-color: white;
+            height: 5px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+
+.author-filter-nft-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+
+    .author-filter-nft{
+        height: 50px;
+        border-radius: 10px;
+        border: 1px solid rgb(229, 232, 235);
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+        &.input-container{
+            width: 50%;
+
+            .filter-nft-input{
+                border: none;
+                width: 100%;
+                margin-left: 10px;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        &:focus{
+            box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+        }
+        &:hover{
+            box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+        }
+
+        &.selection{
+            min-width: 200px;
+            outline: none;
+        }
+
+        &.switch{
+            min-width: 70px;
+        }
+        
+    }
+
+}

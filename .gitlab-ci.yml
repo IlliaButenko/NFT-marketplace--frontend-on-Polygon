@@ -1,0 +1,21 @@
+stages:
+  - dockerize
+
+variables:
+  TAG_LATEST: $CI_REGISTRY_IMAGE/metavart:latest
+  TAG_COMMIT: $CI_REGISTRY_IMAGE/metavart:$CI_COMMIT_SHA
+
+dockerize:
+  image: docker:latest
+  stage: dockerize
+  services:
+    - docker:dind
+  script:
+    - cat $ID_RSA
+    - docker build -t $TAG_COMMIT -t $TAG_LATEST . -f ./Dockerfile
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker push $TAG_COMMIT
+    - docker push $TAG_LATEST
+    - echo $TAG_COMMIT
+  only:
+    - master
